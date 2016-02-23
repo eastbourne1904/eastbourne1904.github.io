@@ -1,1 +1,284 @@
-Hello World
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://127.0.0.1:5477/VetTechCalculator_hazen.Rmd#1 -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="application/shiny-singletons"></script>  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.11.3];shiny[0.13.0]</script><script src="./Vet-Tech Calculator_files/json2-min.js"></script>
+<script src="./Vet-Tech Calculator_files/jquery.min.js"></script>
+<link href="./Vet-Tech Calculator_files/shiny.css" rel="stylesheet">
+<script src="./Vet-Tech Calculator_files/shiny.min.js"></script>  <script src="./Vet-Tech Calculator_files/rmd_loader.js"></script>
+  <link href="./Vet-Tech Calculator_files/rmd_loader.css" rel="stylesheet">
+
+<script src="./Vet-Tech Calculator_files/"></script><meta name="0" content="[object Object]"><link rel="stylesheet" type="text/css" href="./Vet-Tech Calculator_files/bootstrap.min.css"><script src="./Vet-Tech Calculator_files/"></script><script src="./Vet-Tech Calculator_files/"></script><script src="./Vet-Tech Calculator_files/"></script><link rel="stylesheet" type="text/css" href="./Vet-Tech Calculator_files/rmd_perf.css"><script src="./Vet-Tech Calculator_files/"></script>
+  <title>Vet-Tech Calculator</title>
+
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc">
+
+
+
+  <meta name="date" content="2016-02-09">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="./Vet-Tech Calculator_files/fonts.css">
+
+  <link rel="stylesheet" media="all" href="./Vet-Tech Calculator_files/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./Vet-Tech Calculator_files/phone.css">
+
+  <!--<base target="_blank">--><base href="." target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Vet-Tech Calculator',
+                        subtitle: 'A quick pitch with Sample',
+                useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Alasdair Hazen' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+
+
+<script type="text/javascript" src="./Vet-Tech Calculator_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+
+<body class="loaded disconnected"><div id="MathJax_Message" style="display: none;"></div>
+  <div>
+    <div data-display-if="!output.__reactivedoc__" style="display: none;">
+      <div id="rmd_loader_wrapper">
+        <div id="rmd_loader">
+          <img src="./Vet-Tech Calculator_files/rmd_loader.gif">
+          <p>Loading</p>
+        </div>
+      </div>
+    </div>
+    <div id="__reactivedoc__" class="shiny-html-output shiny-bound-output">
+
+
+
+
+
+<slides style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+  <slide class="title-slide segue nobackground current" data-slide-num="1" data-total-slides="5">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title="">Vet-Tech Calculator</h1>
+      <h2 data-config-subtitle="">A quick pitch with Sample</h2>
+      <p data-config-presenter="">Alasdair Hazen<br></p>
+            <p style="margin-top: 6px; margin-left: -2px;">February 09, 2016</p>
+          </hgroup>
+  </slide>
+
+<slide class="next" data-slide-num="2" data-total-slides="5"><hgroup><h2>Veterinarian ranks as fastest growing profession in United States</h2></hgroup><article id="veterinarian-ranks-as-fastest-growing-profession-in-united-states">
+
+<img src="./Vet-Tech Calculator_files/PetOwnershipStats.png" title=""><br><br>
+
+<p>
+
+This means the pass-through of patients is increasing annually without an equivalent staff to accommodate.
+
+</p>
+
+<p>
+
+</p><p>To keep up, Veterinary Technicians and Assistants are required to know more and do more.</p>
+
+</article></slide><slide class="far-next" data-slide-num="3" data-total-slides="5"><hgroup><h2>Knowledge and Accuracy</h2></hgroup><article id="knowledge-and-accuracy">
+
+<font size="4">
+
+<p>
+
+Included in this knowledge is medicine dosages, energy requirements, food requirements, fluid rates, rehydrations, and other equation based calculations.
+
+</p>
+
+<p>
+
+Some of these calculations are complicated and, <strong>if wrong, could impact a patients health</strong>.
+
+</p>
+
+<p>
+
+Because of the complexity and importance of these calculations, the <strong>speed and accuracy are key</strong>.
+
+</p>
+
+<p>
+
+Just some of the calculations and equations used during an exam
+
+</p>
+
+</font><p><font size="4"></font> <font size="3" ,="" color="blue"> - Calculating Total Fluid Needs (TFN) in ml/hr and convert into drops/second.<br>- Calculate doses in both mgs and mls.<br>- Calculate Constant Rate Infusions (CRI’s)<br>- Calculate CRI doses<br>- Weight Conversions<br>- Generic name for Name Brand equivalents<br>…just to name a few </font></p>
+
+</article></slide><slide class="" data-slide-num="4" data-total-slides="5"><hgroup><h2>Keeping up by adding a Shiny App</h2></hgroup><article id="keeping-up-by-adding-a-shiny-app">
+
+<font size="3">
+
+<p>
+
+</p><p>In order to keep pace with the growing pass-through of patience, Vet Techs currently rely on:<br>- Traditional equations, calculated by hand<br>- Apps created on iPad<br>- Apps online</p>
+
+<img src="./Vet-Tech Calculator_files/Courtney1.png" alt="Squirley face" align="right">
+
+<p></p>
+
+<p>
+
+The problem with these are:<br>- Traditional methods can take too long, or worse, be inaccurate<br>- Apps may not port over to all devices, leaving large gaps in availability<br>- Apps online are too cumbersome, hard to find, and are too simplistic<br>
+
+</p>
+
+</font><p><font size="3"></font></p>
+
+<font size="3">
+
+<p>
+
+What if a Shiny App Vet-Tech calculator could be a supplement to current Veterinary software, so every piece of information and every calculation could be entered as data into a patients file?
+
+</p>
+
+<p>
+
+Using simple exports and imports, an automation engineer could import data from a shiny app calculator into the existing software. Using a csv file or a sql database, any automation engineer worth his salt could make the import/export appear seamless. This would improve accuracy and performance of both Vet-Tech and doctor.
+
+</p>
+
+</font>
+
+<h1>
+
+Give Vet-Tech Calculator a try…
+
+</h1>
+
+<br> <font size="3">
+
+<p>
+
+Input the age and weight of your dog, then select a medicine. Vet-Tech Calculator will give you the dosage needed for that medicine. Switch tabs to Calorie Intake. Vet-Tech Calculator will automtically use the weight and age you already input as part of the calculation.
+
+</p>
+
+</font><p><font size="3"></font></p>
+
+</article></slide><slide class="" data-slide-num="5" data-total-slides="5"><hgroup><h2></h2></hgroup><article id="section">
+
+<p><iframe width="100%" height="400" class="shiny-frame" src="./Vet-Tech Calculator_files/saved_resource.html"></iframe></p></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+<div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></slides>
+
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+<script src="./Vet-Tech Calculator_files/"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "file11f81ab83162_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+</div>
+  </div>
+
+
+
+</body></html>
